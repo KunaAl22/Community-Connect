@@ -14,7 +14,6 @@ const createUser = async (req, res) => {
 const getFlag = async (req, res) => {
   const loginUser = req.body;
   const email = loginUser.email;
-  console.log("INNN HERE");
   try {
     const loginUser = await loginDetails.find({ email: email });
     return res.status(200).json(loginUser);
